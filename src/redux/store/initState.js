@@ -24,7 +24,8 @@ export default {
     //   createdAt: 1473499991348
     // }
   ],
-    test: 'sdafs'
+    tests: [
+    ]
 
 
 }

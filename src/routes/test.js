@@ -15,11 +15,11 @@ export default {
     getComponent (nextState, cb) {
       require.ensure([], (require) => {
         // 注入 Reducer
-        injectReducer('test', require('REDUCER/test').default)
+        injectReducer('tests', require('REDUCER/test').default)
 
         /* 组件连接 state */
         const TodoContainer = createContainer(
-          ({ Test }) => ({ Test }),        // mapStateToProps,
+          ({ tests }) => ({ tests }),        // mapStateToProps,
           require('ACTION/test').default,    // mapActionCreators,
           require('COMPONENT/test/').default // 木偶组件
         )
