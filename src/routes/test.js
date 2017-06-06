@@ -19,7 +19,7 @@ export default {
 
         /* 组件连接 state */
         const TodoContainer = createContainer(
-          ({ todos }) => ({ todos }),        // mapStateToProps,
+          ({ Test }) => ({ Test }),        // mapStateToProps,
           require('ACTION/test').default,    // mapActionCreators,
           require('COMPONENT/test/').default // 木偶组件
         )

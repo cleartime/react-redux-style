@@ -1,9 +1,9 @@
 import React from 'react'
 
 /* 待办事项 布局基页 */
-const Test = () => (
+const Test = ({children}) => (
   <div className="center-block">
-      2
+      { children }
   </div>
 )
 
