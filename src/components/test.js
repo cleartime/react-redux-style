@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import handleChange from 'MIXIN/handleChange'
+import Mock from 'mockjs'
 export default class Test extends Component {
     constructor (props) {
         super(props)
@@ -14,7 +15,9 @@ export default class Test extends Component {
         this.setState({ inputVal: '' }) // 清空输入框
     }
     fetchTest () {
-        this.props.fetchTest(1)
+        this.props.fetchTest(Mock.mock({
+            'number|1-100.1-10': 1
+        }).number)
     }
 
     render () {
