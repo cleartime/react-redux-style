@@ -20,7 +20,7 @@ export default class Test extends Component {
     render () {
       return (
       <div>
-          <div onClick={() => this.fetchTest()}>点我</div>
+          <div onClick={() => this.fetchTest()}>点我动态获取</div>
           <form onSubmit={
               (e) => {
                   e.preventDefault() // 防页面跳转
