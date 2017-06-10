@@ -2,7 +2,7 @@
 // Action Type
 // ================================
 const ADD_TEST = 'ADD_TEST'
-
+const TETCH_TEST = 'TETCH_TEST'
 // ================================
 // Action Creator
 // ================================
@@ -11,12 +11,18 @@ const addTest = (test) => ({
   payload: test
 })
 
+
+const fetchTest = (test) => ({
+    type: TETCH_TEST,
+    payload: test
+})
 /* default 导出所有 Action Creators */
 export default {
   // 虽然是同步的函数，但请不要自行 bindActionCreators
   // 皆因调用 connect 后，react-redux 已经帮我们做了，见：
   // https://github.com/reactjs/react-redux/blob/master/src/utils/wrapActionCreators.js
-    addTest
+    addTest,
+    fetchTest
 }
 
 // ================================
@@ -27,5 +33,6 @@ export default {
 // 故在此直接给出处理逻辑
 // ================================
 export const ACTION_HANDLERS = {
-  [ADD_TEST]: (tests, { payload }) => [ ...tests, payload ]
+  [ADD_TEST]: (tests, { payload }) => [ ...tests, payload ],
+    [TETCH_TEST]: (tests, { payload }) => [ ...tests, payload ]
 }

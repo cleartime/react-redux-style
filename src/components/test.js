@@ -13,10 +13,14 @@ export default class Test extends Component {
         this.props.addTest(content)
         this.setState({ inputVal: '' }) // 清空输入框
     }
+    fetchTest () {
+        this.props.fetchTest(1)
+    }
 
     render () {
       return (
       <div>
+          <div onClick={() => this.fetchTest()}>点我</div>
           <form onSubmit={
               (e) => {
                   e.preventDefault() // 防页面跳转
