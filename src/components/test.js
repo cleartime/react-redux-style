@@ -15,9 +15,7 @@ export default class Test extends Component {
         this.setState({ inputVal: '' }) // 清空输入框
     }
     fetchTest () {
-        this.props.fetchTest(Mock.mock({
-            'number|1-100.1-10': 1
-        }).number)
+        this.props.fetchTest(Mock.Random.image())
     }
 
     render () {
