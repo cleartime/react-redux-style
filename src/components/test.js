@@ -15,7 +15,7 @@ export default class Test extends Component {
         this.setState({ inputVal: '' }) // 清空输入框
     }
     fetchTest () {
-        this.props.fetchTest(Mock.Random.area())
+        this.props.fetchTest(Mock.Random.region())
     }
 
     render () {
